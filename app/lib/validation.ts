@@ -1,0 +1,8 @@
+export class InputError extends Error {}
+export function required(value:unknown,label:string,max=200):string {if(typeof value!=="string"||!value.trim()||value.trim().length>max)throw new InputError(`Перевірте поле «${label}» (до ${max} символів).`);return value.trim();}
+export function optional(value:unknown,max=1000):string {if(value===undefined||value===null)return "";if(typeof value!=="string"||value.length>max)throw new InputError("Текст занадто довгий.");return value.trim();}
+export function gradeValue(value:unknown):number|null {if(value===""||value===null||value===undefined)return null;if(typeof value!=="number"||!Number.isInteger(value)||value<1||value>12)throw new InputError("Оцінка має бути цілим числом від 1 до 12.");return value;}
+export function attendanceValue(value:unknown):"present"|"absent"|"excused"|null {if(value===null||value===undefined||value==="")return null;if(value!=="present"&&value!=="absent"&&value!=="excused")throw new InputError("Невідома позначка відвідування.");return value;}
+export function dateValue(value:unknown):string {const s=required(value,"Дата",10);if(!/^\d{4}-\d{2}-\d{2}$/.test(s)||!Number.isFinite(new Date(s+"T12:00:00Z").getTime())||new Date(s+"T12:00:00Z").toISOString().slice(0,10)!==s)throw new InputError("Вкажіть коректну дату.");return s;}
+export function intValue(value:unknown,min:number,max:number,label:string):number {if(typeof value!=="number"||!Number.isInteger(value)||value<min||value>max)throw new InputError(`${label}: потрібно число від ${min} до ${max}.`);return value;}
+export function emailValue(value:unknown):string {const s=required(value,"Електронна пошта",200).toLowerCase();if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(s))throw new InputError("Перевірте адресу електронної пошти.");return s;}

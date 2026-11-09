@@ -1,0 +1,41 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1793961144429,
+      "tag": "0000_free_thanos",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1794067272170,
+      "tag": "0001_account_access",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1794172678504,
+      "tag": "0002_colorful_magdalene",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1794173758441,
+      "tag": "0003_abnormal_slyde",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "6",
+      "when": 1794204691785,
+      "tag": "0004_journal_sessions",
+      "breakpoints": true
+    }
+  ]
+}

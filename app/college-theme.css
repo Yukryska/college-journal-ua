@@ -1,0 +1,249 @@
+/* Institution identity: the official college emblem and website navigation. */
+:root {
+  --college-blue: #323a8d;
+  --college-blue-dark: #252d73;
+  --college-blue-soft: #eef0fb;
+  --college-lime: #a6c430;
+  --college-lime-soft: #f1f6df;
+  --college-cyan: #29a8cf;
+  --college-cyan-soft: #eaf7fc;
+  --bg: #f5f6fb;
+  --ink: #252d47;
+  --muted: #7d859d;
+  --line: #e6e9f2;
+  --green: var(--college-blue);
+  --green-light: var(--college-blue-soft);
+  --blue: var(--college-cyan);
+  --amber: #8c9e35;
+}
+
+button:focus-visible, a:focus-visible, input:focus-visible,
+select:focus-visible, textarea:focus-visible {
+  outline-color: #91b8ee;
+}
+.sidebar { border-top: 4px solid var(--college-blue); padding-top: 25px; }
+.brand.college-brand-link { padding: 0 3px; letter-spacing: normal; }
+.college-identity { display: flex; align-items: center; gap: 9px; }
+.college-logo { object-fit: contain; flex-shrink: 0; border-radius: 50%; background: #fff; }
+.college-wordmark { display: flex; flex-direction: column; min-width: 0; }
+.college-wordmark strong { color: var(--college-blue); font-size: 14px; font-weight: 800; letter-spacing: .4px; line-height: 1.35; }
+.college-parent { color: #59638a; font-size: 8.5px; line-height: 1.6; margin-top: 3px; letter-spacing: 0; }
+.college-product { color: #7b859f; border-top: 1px solid var(--line); padding-top: 5px; margin-top: 5px; font-size: 8px; font-weight: 500; line-height: 1.5; letter-spacing: .1px; }
+.mobile-brand { display: none; }
+.college-identity--standalone { flex-direction: column; gap: 15px; text-align: center; }
+.college-identity--standalone .college-logo { width: 104px; height: 104px; box-shadow: 0 8px 30px #323a8d0b; }
+.college-identity--standalone .college-wordmark strong { font-size: 22px; letter-spacing: .8px; }
+.college-identity--standalone .college-parent { font-size: 12px; margin-top: 5px; }
+.college-identity--standalone .college-product { display: none; }
+.workspace-label { color: #929ab3; margin-top: 35px; }
+.manage-label { margin-top: 27px; }
+.nav-item { color: #717c9b; }
+.nav-item:hover { color: var(--college-blue); background: #f0f2fb; }
+.nav-item.active { background: var(--college-blue); color: white; box-shadow: inset 3px 0 0 var(--college-lime), 0 3px 10px #323a8d10; }
+.nav-dot { background: var(--college-lime); }
+.year-card { background: #fafbff; border-color: #e2e6f3; color: var(--college-blue); }
+.year-card strong { color: var(--college-blue); }
+.year-card span:not(.live-dot) { color: #828ca9; }
+.live-dot { background: var(--college-lime); }
+.demo-note { color: #9099b1; }
+.demo-note b { color: #929aae; }
+.profile .sign-out { color: #929bb5; }
+.avatar { background: var(--college-blue-soft); color: var(--college-blue); }
+.profile-text > span { color: #8d96af; }
+.topbar { border-top: 4px solid var(--college-blue); min-height: 75px; }
+.breadcrumb > .muted { color: #737fa5; }
+.breadcrumb > .current-page { color: #45517e; }
+.today, .role-select { color: #7c86a5; }
+.role-select select { color: #59648b; }
+.eyebrow { color: var(--college-blue); letter-spacing: 1.35px; }
+h1 { color: var(--college-blue-dark); }
+.page-heading { border-left: 3px solid var(--college-lime); padding-left: 16px; }
+.page-heading p { color: #7a849f; }
+.button.primary { background: var(--college-blue); box-shadow: 0 3px 9px #323a8d14; }
+.button.primary:hover { background: var(--college-blue-dark); }
+.button.secondary { border-color: #e0e4f1; color: #657196; }
+.button.secondary:hover { background: #f3f5fd; border-color: #c8cfe8; }
+.filter-field > span { color: #8c96b1; }
+.filter-field > div { color: #7683ac; }
+.filter-field select { color: #3e4b79; }
+.month-picker { border-color: #e5e9f4; }
+.month-picker > label { color: #65739b; }
+.icon-button { color: #8b97b5; }
+.icon-button:hover { color: var(--college-blue); background: var(--college-blue-soft); }
+.stat-icon.green { background: var(--college-blue-soft); color: var(--college-blue); }
+.stat-icon.blue { background: var(--college-cyan-soft); color: #258cac; }
+.stat-icon.amber { background: var(--college-lime-soft); color: #849c25; }
+.stat-label { color: #7b87a6; }
+.stat-value { color: var(--college-blue-dark); }
+.stat-value small { color: #9da6c1; }
+.stat-card p { color: #919cb6; }
+.panel h2 { color: #354271; }
+.panel-heading p { color: #8d97af; }
+.count-badge { color: #7f8bb2; background: #f0f2fb; border-color: #e6e9f5; }
+.search-box { background: #fafbff; border-color: #e9edf6; color: #9ba7c0; }
+.journal-table th { background: #f8f9fe; color: #8490af; }
+.journal-table th > button { color: #8390b5; }
+.journal-table th > button > span { color: #56658f; }
+.journal-table th i { color: #99a5c1; }
+.journal-table td { border-bottom-color: #eef0f7; }
+.journal-table tbody tr:hover td { background: #fbfcff; }
+.journal-table .selected-column { background: #f0f2fd !important; }
+.journal-table th.selected-column { background: #e9edfc !important; }
+.journal-table th.selected-column button > span,
+.journal-table th.selected-column button > small { color: var(--college-blue); }
+.journal-table .average-col { background: #fafbff; }
+.student-average { color: #576493; }
+.mark-cell.excellent { background: #f0f5dc; color: #526a16; }
+.mark-cell.good { background: #eaf5fc; color: #326c8d; }
+.mark-cell.present { color: #a6b0d1; }
+.mark-cell:enabled:hover { outline-color: #939fda; }
+.mark-cell.empty { color: #d0d6e6; }
+.legend-point.green { background: var(--college-lime); }
+.legend-point.blue { background: #74b8d7; }
+.legend-present { color: #9aa8cb; }
+.legend { color: #909bb5; }
+.save-state { color: #899c54; }
+.student-avatar { background: #eef0fa; color: #7989bc; }
+.tone-0 { background: #edf0fc; color: #7c8bb9; }
+.tone-1 { background: #ecf7fc; color: #72a8c0; }
+.tone-2 { background: #f2f6e3; color: #9aaa62; }
+.tone-3 { background: #f6f1e8; color: #b29a70; }
+.tone-4 { background: #f0edf8; color: #a095bf; }
+.square-icon { background: var(--college-blue-soft); color: #7d8bb5; }
+.card-label { color: #8592b5; }
+.lesson-date { color: #3d4c7c; }
+.lesson-date > span { color: #8d9ab6; }
+.type-badge { color: #768d2a; background: #f1f6e0; }
+.lesson-card h3 { color: #3d4b77; }
+.homework > span { color: #8794b3; }
+.homework p { color: #7b87a6; }
+.tip-card { background: var(--college-blue); }
+.tip-icon { color: var(--college-lime); }
+.tip-card h3 { color: #fff; }
+.tip-card p { color: #d0d6f1; }
+.tip-lines { opacity: .5; }
+.tip-lines span { border-color: #6874b8; }
+.tip-lines span:nth-child(2) { border-color: #a6c43088; }
+.tip-lines span:nth-child(3) { border-color: #29a8cf88; }
+.date-tile { background: var(--college-blue-soft); border-color: #e5e9f7; color: #8d9bc3; }
+.date-tile strong { color: var(--college-blue); }
+.lesson-content h3 { color: #3d4c79; }
+.lesson-content b { color: #7085b7; }
+.lesson-content p { color: #8793b1; }
+.group-card.selected { border-color: #8e9ad2; box-shadow: 0 0 0 1px #d6ddf6; }
+.group-card > strong { color: var(--college-blue); }
+.group-card > p { color: #8b98b3; }
+.group-card > span:last-of-type { color: #8390ac; }
+.group-card i { background: var(--college-lime); }
+.group-arrow { color: #95a2c6; }
+.group-card.add-group { background: #f4f6fd; color: #8a98bf; border-color: #cfd6ed; }
+.student-directory svg { color: #9ca9c9; }
+.student-directory small { color: #929fba; }
+.analytics-name { color: #59678d; }
+.progress-track { background: #f0f2fa; }
+.progress-track > span { background: #7d8bca; }
+.analytics-students strong { color: var(--college-blue); }
+.analytics-students small { color: #8c9bba; }
+.role-badge.admin { color: #6c7ac1; background: var(--college-blue-soft); border-color: #e2e6f6; }
+.role-badge.teacher { color: #6a9db7; background: var(--college-cyan-soft); border-color: #e2f0f7; }
+.role-badge.student { color: #8c9f46; background: #f3f6e5; border-color: #e9efcd; }
+.account-status { color: #92a15b; }
+.account-access-controls { display: flex; align-items: center; gap: 8px; }
+.account-access-controls .account-status { display: inline; min-width: 0; }
+.account-access-controls .account-status--revoked { color: #a33a48; }
+.account-access-controls .button { min-height: 34px; padding: 7px 9px; }
+.account-action-buttons { display: flex; gap: 6px; }
+.account-access-controls .account-icon-button { width: 34px; padding: 0; }
+.account-access-controls .account-delete-button { color: #a33a48; border-color: #eac9ce; }
+.account-access-controls .account-delete-button:hover { background: #fff0f2; border-color: #d699a3; }
+.button.danger { background: #a33a48; color: white; }
+.button.danger:hover { background: #8c2d3c; }
+.settings-note, .modal-hint { color: #8b98b3; }
+.quick-actions > button > svg { color: #96a5ca; }
+.audit-dot { background: #9eaccf; }
+.audit-row strong { color: #647298; }
+.audit-row small { color: #99a5bf; }
+.text-button { color: var(--college-blue); }
+.no-lessons { color: #8898ba; }
+.empty-state { color: #adb8d6; }
+.empty-state strong { color: #7e8eb7; }
+.empty-state p { color: #99a5c0; }
+.field > span { color: #6e7da3; }
+.field input, .field select, .field textarea { border-color: #e0e5f2; background: #fcfcff; }
+.field input:focus, .field select:focus, .field textarea:focus { border-color: #8c9bd1; box-shadow: 0 0 0 3px #f0f2fc; }
+.grade-picker button { border-color: #e4e8f6; color: #8494ba; background: #fafbff; }
+.grade-picker button:hover { background: var(--college-blue-soft); }
+.grade-picker button.chosen { color: white; background: var(--college-blue); border-color: var(--college-blue); }
+.attendance-picker button { color: #8494b6; background: #fafbff; border-color: #e4e9f6; }
+.attendance-picker button.chosen { color: var(--college-blue); background: var(--college-blue-soft); border-color: #8d9bce; }
+.form-label { color: #596a94; }
+.modal-head h2 { color: var(--college-blue); }
+.modal-head p { color: #8d9ab6; }
+.student-summary > div > strong { color: var(--college-blue); }
+.loading-screen > .spin { color: var(--college-blue); }
+.loading-screen > p { color: #7f8aab; }
+.loading-screen > h1, .loading-screen > h2 { color: var(--college-blue); }
+.toast { background: var(--college-blue-dark); color: #edf0ff; }
+.toast > svg { color: var(--college-lime); }
+.toast button { color: #c3ccf4; }
+.page-footer { color: #919db9; }
+.college-footer { display: flex; align-items: center; flex-wrap: wrap; gap: 5px; }
+.college-footer a { color: #727fa9; display: inline-flex; align-items: center; gap: 5px; }
+.college-footer a:hover { color: var(--college-blue); }
+.heading-actions { flex-wrap: wrap; justify-content: flex-end; }
+.journal-instruction { display: flex; align-items: center; gap: 7px; padding: 10px 20px; color: #7785aa; background: #fafbff; font-size: 9px; border-bottom: 1px solid var(--line); }
+.teacher-cabinet-banner { background: #f0f3ff; color: #6879ae; border-color: #dce3fa; }
+.teacher-cabinet-banner > svg { color: var(--college-blue); }
+.mark-targets { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.mark-targets select { min-width: 0; text-overflow: ellipsis; }
+
+@media (max-width: 1050px) {
+  .brand.college-brand-link { padding: 0; }
+  .college-identity--sidebar { gap: 7px; }
+  .college-identity--sidebar .college-logo { width: 57px; height: 57px; }
+  .college-wordmark strong { font-size: 13px; }
+  .college-parent { font-size: 7.8px; }
+  .college-product { font-size: 7.5px; }
+  .topbar { min-height: 65px; }
+}
+@media (max-width: 800px) {
+  .mobile-brand { display: inline-flex; }
+  .college-identity--mobile { gap: 7px; }
+  .college-identity--mobile .college-logo { width: 31px; height: 31px; }
+  .college-identity--mobile .college-wordmark strong { font-size: 10px; letter-spacing: .2px; }
+  .college-identity--mobile .college-parent,
+  .college-identity--mobile .college-product { display: none; }
+  .breadcrumb > .current-page { max-width: 110px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 9px; }
+  .topbar { min-height: 63px; }
+  .sidebar .college-logo { width: 64px; height: 64px; }
+  .sidebar .college-wordmark strong { font-size: 14px; }
+  .sidebar .college-parent { font-size: 8.5px; }
+}
+@media (max-width: 580px) {
+  .account-access-controls { flex: 1 0 100%; flex-wrap: wrap; justify-content: space-between; padding-left: 36px; }
+  .account-access-controls .button { min-height: 40px; }
+  .account-access-controls .account-icon-button { width: 40px; }
+  .mark-targets { grid-template-columns: 1fr; gap: 0; }
+  .journal-instruction { padding: 10px 13px; font-size: 9px; line-height: 1.7; align-items: flex-start; }
+  .journal-instruction svg { margin-top: 2px; }
+  .breadcrumb > .current-page, .breadcrumb > .breadcrumb-chevron { display: none; }
+  .topbar { gap: 8px; }
+  .topbar-right { min-width: 0; }
+  .page-heading { padding-left: 12px; }
+  .page-heading .eyebrow { font-size: 7px; letter-spacing: .8px; }
+  .month-picker { background: #fafbff; }
+  .journal-table th.student-col { background: #f8f9fe; }
+  .college-footer { gap: 3px; max-width: 64%; }
+  .college-footer a { font-size: 7px; }
+  .college-footer a svg { display: none; }
+  .page-footer > span:last-child { font-size: 6px; max-width: 30%; text-align: right; }
+}
+@media print {
+  .page-heading { border-left-color: var(--college-blue); }
+  .college-footer { display: none; }
+}
+
+.sign-in-form { width: min(100%, 380px); padding: 22px; text-align: left; }
+.sign-in-form .field input { font-size: 16px; }
+.sign-in-form .button { width: 100%; justify-content: center; }
+.sign-in-form [role="alert"] { margin: 0 0 16px; }
